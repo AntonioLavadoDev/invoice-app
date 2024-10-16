@@ -1,8 +1,8 @@
-import { invoice } from "../models/invoice";
+import { Invoice } from "../models/invoice";
 
-export const invoiceData: invoice = {
+export const invoiceData: Invoice = {
     id: 1,
-    name: 'Componentes de PC',
+    name: 'Components of PC',
     client: {
         name: 'Juan Perez',
         lastname: 'Gonzalez',
