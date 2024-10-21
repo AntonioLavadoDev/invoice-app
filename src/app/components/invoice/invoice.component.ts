@@ -9,7 +9,7 @@ import { CompanyViewComponent } from '../company-view/company-view.component';
 @Component({
   selector: 'app-invoice',
   standalone: true,
-  imports: [InvoiceViewComponent, ClientViewComponent, ListItemsComponent, RowItemComponent,CompanyViewComponent],
+  imports: [InvoiceViewComponent, ClientViewComponent, ListItemsComponent, CompanyViewComponent],
   templateUrl: './invoice.component.html'
   
 })
