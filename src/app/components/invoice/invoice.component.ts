@@ -1,10 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { InvoiceService } from '../../services/invoice.service';
 import { Invoice} from '../../models/invoice';
+import { InvoiceViewComponent } from '../invoice-view/invoice-view.component';
+import { ClientViewComponent } from '../client-view/clientview.component';
+import { ListItemsComponent } from '../list-items/list-items.component';
+import { RowItemComponent } from '../row-item/row-item.component';
+import { CompanyViewComponent } from '../company-view/company-view.component';
 @Component({
   selector: 'app-invoice',
   standalone: true,
-  imports: [],
+  imports: [InvoiceViewComponent, ClientViewComponent, ListItemsComponent, RowItemComponent,CompanyViewComponent],
   templateUrl: './invoice.component.html'
   
 })
