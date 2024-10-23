@@ -16,6 +16,13 @@ export class InvoiceService {
     return {... this.invoice, total};
   }
 
+  remove(id:number): Invoice {
+    this.invoice.items = this.invoice.items.filter(item => item.id !== id);
+    const total = this.totalCalculation();
+
+    return {... this.invoice, total};
+  }
+
   totalCalculation() {
     let total= 0;
 

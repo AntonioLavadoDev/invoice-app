@@ -29,8 +29,8 @@ export class InvoiceComponent implements OnInit {
   ngOnInit(): void {
     this.invoice = this.service.getInvoice();
   }
-
+  //Se llama al servicio para que elimine un item de la factura. la lógica de negocio está en el invoice.service.ts
   removeItem(id: number){
-    this.invoice.items = this.invoice.items.filter(item => item.id !== id);
+    this.invoice = this.service.remove(id);
   }
 }
