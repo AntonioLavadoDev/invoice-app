@@ -12,6 +12,15 @@ export class InvoiceService {
  
   //Necesarion para que el componente pueda obtener la factura.
   getInvoice(): Invoice{
-    return this.invoice;
+    const total = this.totalCalculation();
+    return {... this.invoice, total};
+  }
+
+  totalCalculation() {
+    let total= 0;
+
+    this.invoice.items.forEach(item => {total +=  (item.price * item.quantity);
+    });
+    return total;
   }
 }
