@@ -14,9 +14,10 @@
         <div class="col">
             <company-view [company]="invoice.company"/>
         </div>
+    </div>       
     </div>
-        <list-items [items]="invoice.items" (removeEventEmitter)="removeItem($event)"/>
+    <list-items [items]="invoice.items" (removeEventEmitter)="removeItem($event)"/>
         <total [total]="invoice.total"/>
-    </div>
+        <form-item/>
     </div>
 </div>
