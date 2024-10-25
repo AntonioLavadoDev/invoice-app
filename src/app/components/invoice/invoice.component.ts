@@ -8,6 +8,7 @@ import { RowItemComponent } from '../row-item/row-item.component';
 import { CompanyViewComponent } from '../company-view/company-view.component';
 import { TotalComponent } from '../total/total.component';
 import { FormItemComponent } from '../form-item/form-item.component';
+import { Item } from '../../models/item';
 @Component({
   selector: 'app-invoice',
   standalone: true,
@@ -34,5 +35,9 @@ export class InvoiceComponent implements OnInit {
   //Se llama al servicio para que elimine un item de la factura. la lógica de negocio está en el invoice.service.ts
   removeItem(id: number){
     this.invoice = this.service.remove(id);
+  }
+
+  addItem(item : Item){
+    this.invoice = this.service.add(item);
   }
 }

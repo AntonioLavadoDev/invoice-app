@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class FormItemComponent {
 
-  @Output() addItemEvent = new EventEmitter();
+  @Output() addItemEventEmitter = new EventEmitter();
   
   //Esto es un contador que se incrementa cada vez que se crea un nuevo item, parte de 4 porque ya hay 3 items en el data
   private counterId = 4;
@@ -19,5 +19,14 @@ export class FormItemComponent {
     price: '',
     quantity: ''
   }
+
+  onSubmit(): void {
+    this.addItemEventEmitter.emit({id: this.counterId,...this.item});
+    this.counterId++;
+    
+    this.item = {
+      product: '',
+      price: '',
+      quantity: ''}}
 
 }
